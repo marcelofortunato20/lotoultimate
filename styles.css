@@ -1,0 +1,239 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-fallback: #6b4f3a;
+  --surface: rgba(45, 30, 18, 0.88);
+  --border: rgba(120, 85, 50, 0.35);
+  --text: #f5ebe0;
+  --text-muted: rgba(210, 185, 155, 0.75);
+  --accent: #8b5a2b;
+  --mega: #4ade80;
+  --quina: #60a5fa;
+  --lotofacil: #c084fc;
+  --radius: 20px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--text);
+  background-color: var(--bg-fallback);
+  background-image: url("assets/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  gap: 3rem;
+}
+
+.header {
+  text-align: center;
+}
+
+.header__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #f5e6d0;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header__title {
+  font-size: clamp(1.85rem, 5.5vw, 2.85rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: #fde68a;
+  text-shadow: 0 3px 16px rgba(0, 0, 0, 0.55);
+  max-width: 18ch;
+  margin: 0 auto;
+}
+
+.header__highlight {
+  color: #ffffff;
+  text-shadow: 0 3px 16px rgba(0, 0, 0, 0.55);
+}
+
+.games {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+.game-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  width: 100%;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  text-align: left;
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.game-btn:hover {
+  transform: translateY(-3px);
+  background: rgba(58, 38, 22, 0.94);
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.game-btn:active {
+  transform: translateY(0);
+}
+
+.game-btn__name {
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.game-btn__hint {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.game-btn--mega:hover,
+.game-btn--mega:focus-visible {
+  border-color: rgba(74, 222, 128, 0.5);
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.45),
+    0 0 20px rgba(74, 222, 128, 0.15);
+  outline: none;
+}
+
+.game-btn--mega .game-btn__name {
+  color: var(--mega);
+}
+
+.game-btn--quina:hover,
+.game-btn--quina:focus-visible {
+  border-color: rgba(96, 165, 250, 0.5);
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.45),
+    0 0 20px rgba(96, 165, 250, 0.15);
+  outline: none;
+}
+
+.game-btn--quina .game-btn__name {
+  color: var(--quina);
+}
+
+.game-btn--lotofacil:hover,
+.game-btn--lotofacil:focus-visible {
+  border-color: rgba(192, 132, 252, 0.5);
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.45),
+    0 0 20px rgba(192, 132, 252, 0.15);
+  outline: none;
+}
+
+.game-btn--lotofacil .game-btn__name {
+  color: var(--lotofacil);
+}
+
+.verify-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 420px;
+  padding: 1rem 1.75rem;
+  border: 1px solid rgba(245, 230, 208, 0.35);
+  border-radius: var(--radius);
+  background: rgba(245, 230, 208, 0.12);
+  color: #fff8ee;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.verify-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(245, 230, 208, 0.2);
+  border-color: rgba(245, 230, 208, 0.55);
+}
+
+.back-home-link {
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  color: #f5e6d0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.2s ease;
+}
+
+.back-home-link--top {
+  margin-bottom: 0.25rem;
+}
+
+.back-home-link:hover {
+  opacity: 0.8;
+}
+
+@media (min-width: 640px) {
+  .games {
+    max-width: 480px;
+    gap: 1.25rem;
+  }
+
+  .verify-btn {
+    max-width: 480px;
+  }
+
+  .back-home-link {
+    max-width: 480px;
+  }
+
+  .game-btn {
+    padding: 1.75rem 2rem;
+  }
+
+  .game-btn__name {
+    font-size: 1.5rem;
+  }
+}

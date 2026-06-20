@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificar Jogos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page" id="verify-page">
+      <a class="back-home-link back-home-link--top" href="index.html">← Voltar ao início</a>
+
+      <div id="verify-select">
+        <header class="header">
+          <h1 class="header__title">Qual jogo?</h1>
+        </header>
+
+        <nav class="games" aria-label="Selecione o jogo para verificar">
+          <button class="game-btn game-btn--mega" type="button" data-game="mega-sena">
+            <span class="game-btn__name">Mega-Sena</span>
+            <span class="game-btn__hint">6 números de 1 a 60</span>
+          </button>
+
+          <button class="game-btn game-btn--quina" type="button" data-game="quina">
+            <span class="game-btn__name">Quina</span>
+            <span class="game-btn__hint">5 números de 1 a 80</span>
+          </button>
+
+          <button class="game-btn game-btn--lotofacil" type="button" data-game="lotofacil">
+            <span class="game-btn__name">Lotofácil</span>
+            <span class="game-btn__hint">15 números de 1 a 25</span>
+          </button>
+        </nav>
+      </div>
+
+      <a class="back-home-link" href="index.html">← Voltar ao início</a>
+    </main>
+
+    <script src="verificar.js"></script>
+  </body>
+</html>

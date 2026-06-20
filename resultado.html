@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resultado</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="resultado.css" />
+  </head>
+  <body>
+    <main class="result-page">
+      <a class="back-link back-link--top" href="index.html">← Voltar</a>
+
+      <article class="result-card" id="result-card">
+        <div class="loading" id="loading">Carregando resultado...</div>
+        <div class="error hidden" id="error"></div>
+        <div class="result-content hidden" id="result-content"></div>
+      </article>
+
+      <a class="back-link" href="index.html">← Voltar</a>
+    </main>
+
+    <div class="quantity-modal hidden" id="quantity-modal" role="dialog" aria-modal="true">
+      <div class="quantity-modal__backdrop" id="quantity-modal-backdrop"></div>
+      <div class="quantity-modal__card">
+        <h2 class="quantity-modal__title">Quantidade de jogos</h2>
+        <p class="quantity-modal__hint">Informe quantos jogos deseja gerar</p>
+        <input
+          class="quantity-modal__input"
+          id="quantity-input"
+          type="number"
+          min="1"
+          max="1000"
+          value="10"
+        />
+        <div class="quantity-modal__actions">
+          <button class="quantity-modal__btn quantity-modal__btn--cancel" id="quantity-cancel" type="button">
+            Cancelar
+          </button>
+          <button class="quantity-modal__btn quantity-modal__btn--confirm" id="quantity-confirm" type="button">
+            Gerar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="game-generator.js"></script>
+    <script src="resultado.js"></script>
+  </body>
+</html>

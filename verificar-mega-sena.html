@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificar Mega-Sena</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="verificar-jogo.css" />
+  </head>
+  <body data-game="mega-sena">
+    <main class="verify-game-page">
+      <a class="back-home-link back-home-link--top" href="verificar.html">← Escolher outro jogo</a>
+
+      <section class="verify-game-card">
+        <button class="contests-toggle" id="contests-toggle" type="button" aria-expanded="true">
+          <span>Últimos 10 Concursos (clique para preencher)</span>
+          <span class="contests-toggle__icon">▼</span>
+        </button>
+
+        <ul class="contests-list" id="contests-list">
+          <li class="contests-list__loading">Carregando concursos...</li>
+        </ul>
+      </section>
+
+      <a
+        class="official-link"
+        href="https://loterias.caixa.gov.br/Paginas/Mega-Sena.aspx"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Site Oficial da Mega-Sena - CAIXA
+      </a>
+
+      <section class="verify-game-card verify-game-form">
+        <label class="verify-game-label" for="concurso-input">Número do Concurso</label>
+        <input
+          class="verify-game-input"
+          id="concurso-input"
+          type="number"
+          placeholder="ex: 3000"
+          min="1"
+        />
+
+        <label class="verify-game-label" for="jogos-input">
+          Seus Jogos de 6 números (um por linha)
+        </label>
+        <textarea
+          class="verify-game-textarea"
+          id="jogos-input"
+          rows="8"
+          placeholder="05, 12, 23, 34, 45, 56"
+        ></textarea>
+
+        <button class="verify-game-btn" id="verify-btn" type="button">
+          Verificar Premiação
+        </button>
+      </section>
+
+      <div class="verify-game-results hidden" id="results"></div>
+
+      <a class="back-home-link" href="verificar.html">← Escolher outro jogo</a>
+    </main>
+
+    <script src="verificar-jogo.js"></script>
+  </body>
+</html>
